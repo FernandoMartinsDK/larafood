@@ -7,6 +7,9 @@ Route::prefix('admin')
     /**
      * Routes Details Plans
      */
+    
+    Route::delete('plans/{url}/details/{idDetails}', 'DetailPlanController@destroy')->name('details.plan.destroy');
+    Route::get('plans/{url}/details/{idDetails}', 'DetailPlanController@show')->name('details.plan.show');
     Route::put('plans/{url}/details/{idDetails}', 'DetailPlanController@update')->name('details.plan.update');
     Route::get('plans/{url}/details/{idDetails}/edit', 'DetailPlanController@edit')->name('details.plan.edit');
     Route::post('plans/{url}/details', 'DetailPlanController@store')->name('details.plan.store');
